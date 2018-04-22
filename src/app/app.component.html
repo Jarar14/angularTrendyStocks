@@ -35,13 +35,13 @@
       </table>
   </div>
   <div class="row flex-nowrap" *ngIf="trendData">
-    <div style="width:50%;">
+    <div style="margin-left:10px; width:35.8%;">
       <br>
-      Pricing Information for {{companyData.companyName}}:<br><br>
-      Today:<br>Open: {{trendData[today].open}}<br>Low: {{trendData[today].low}}<br>High: {{trendData[today].high}}<br>Close: {{trendData[today].close}}<br>Daily Percent Change: {{trendData[today].changePercent}}%<br><br>
-      Last Week:<br>Low: {{lastWeekLow}} on {{lastWeekLowDate}}<br>High: {{lastWeekHigh}} on {{lastWeekHighDate}}<br>Weekly Percent Change: {{lastWeekPercentChange}}%<br><br>
-      Last Month:<br>Low: {{lastMonthLow}} on {{lastMonthLowDate}}<br>High: {{lastMonthHigh}} on {{lastMonthHighDate}}<br>Monthly Percent Change: {{lastMonthPercentChange}}%<br><br>
-      Last Year:<br>Low: {{lastYearLow}} on {{lastYearLowDate}}<br>High: {{lastYearHigh}} on {{lastYearHighDate}}<br>Yearly Percent Change: {{lastYearPercentChange}}%<br><br>
+           Pricing Information for {{companyData.companyName}}:<br><br>
+           Today:<br>     Open: {{trendData[today].open}}<br>     Low: {{trendData[today].low}}<br>     High: {{trendData[today].high}}<br>     Close: {{trendData[today].close}}<br>     Daily Percent Change: {{trendData[today].changePercent}}%<br><br>
+           Last Week:<br>     Low: {{lastWeekLow}} on {{lastWeekLowDate}}<br>     High: {{lastWeekHigh}} on {{lastWeekHighDate}}<br>     Weekly Percent Change: {{lastWeekPercentChange}}%<br><br>
+           Last Month:<br>     Low: {{lastMonthLow}} on {{lastMonthLowDate}}<br>     High: {{lastMonthHigh}} on {{lastMonthHighDate}}<br>     Monthly Percent Change: {{lastMonthPercentChange}}%<br><br>
+           Last Year:<br>     Low: {{lastYearLow}} on {{lastYearLowDate}}<br>     High: {{lastYearHigh}} on {{lastYearHighDate}}<br>     Yearly Percent Change: {{lastYearPercentChange}}%<br><br>
     </div>
     <div>
       <br>

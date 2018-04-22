@@ -18,13 +18,19 @@ export class AppComponent {
   lastMonth:any;
   lastYear:any;
   lastWeekLow:any;
+  lastWeekLowDate:any;
   lastWeekHigh:any;
+  lastWeekHighDate:any;
   lastWeekPercentChange:any;
   lastMonthLow:any;
+  lastMonthLowDate:any;
   lastMonthHigh:any;
+  lastMonthHighDate:any;
   lastMonthPercentChange:any;
   lastYearLow:any;
+  lastYearLowDate:any;
   lastYearHigh:any;
+  LastYearHighDate:any;
   lastYearPercentChange:any;
 
 
@@ -60,9 +66,9 @@ export class AppComponent {
       this.trendData = result;
 
       this.today = this.trendData.length - 1;
-      this.lastWeek = this.today - 7;
-      this.lastMonth = this.today - 31;
-      this.lastYear = this.today - 365;
+      this.lastWeek = this.today - 5;
+      this.lastMonth = this.today - 23;
+      this.lastYear = this.today - 264;
       this.lastWeekLow = this.trendData[this.today].low;
       this.lastWeekHigh = this.trendData[this.today].high;
       this.lastWeekPercentChange = 0.0;
@@ -73,6 +79,13 @@ export class AppComponent {
       this.lastYearHigh = this.trendData[this.today].high;
       this.lastYearPercentChange = 0.0;
 
+      this.lastWeekLowDate = this.trendData[this.today].date;
+      this.lastWeekHighDate = this.trendData[this.today].date;
+      this.lastMonthLowDate = this.trendData[this.today].date;
+      this.lastMonthHighDate = this.trendData[this.today].date;
+      this.lastYearLowDate = this.trendData[this.today].date;
+      this.lastYearHighDate = this.trendData[this.today].date;
+
       if (this.lastWeek >= 0)
             {
               for (var i = this.lastWeek; i <= this.today; i++)
@@ -80,10 +93,12 @@ export class AppComponent {
                 if (this.trendData[i].high > this.lastWeekHigh)
                 {
                   this.lastWeekHigh = this.trendData[i].high;
+                  this.lastWeekHighDate = this.trendData[i].date;
                 }
                 if (this.trendData[i].low < this.lastWeekLow)
                 {
                   this.lastWeekLow = this.trendData[i].low;
+                  this.lastWeekLowDate = this.trendData[i].date;
                 }
               }
               this.lastWeekPercentChange = (this.trendData[this.today].close - this.trendData[this.lastWeek].open) / this.trendData[this.lastWeek].open * 100;
@@ -96,10 +111,12 @@ export class AppComponent {
                 if (this.trendData[i].high > this.lastMonthHigh)
                 {
                   this.lastMonthHigh = this.trendData[i].high;
+                  this.lastMonthHighDate = this.trendData[i].date;
                 }
                 if (this.trendData[i].low < this.lastMonthLow)
                 {
                   this.lastMonthLow = this.trendData[i].low;
+                  this.lastMonthLowDate = this.trendData[i].date;
                 }
               }
               this.lastMonthPercentChange = (this.trendData[this.today].close - this.trendData[this.lastMonth].open) / this.trendData[this.lastMonth].open * 100;
@@ -113,10 +130,12 @@ export class AppComponent {
                 if (this.trendData[i].high > this.lastYearHigh)
                 {
                   this.lastYearHigh = this.trendData[i].high;
+                  this.lastYearHighDate = this.trendData[i].date;
                 }
                 if (this.trendData[i].low < this.lastYearLow)
                 {
                   this.lastYearLow = this.trendData[i].low;
+                  this.lastYearLowDate = this.trendData[i].date;
                 }
               }
               this.lastYearPercentChange = (this.trendData[this.today].close - this.trendData[this.lastYear].open) / this.trendData[this.lastYear].open * 100;

@@ -34,12 +34,54 @@
         </tr>
       </table>
   </div>
-  <div class="row flex-nowrap">
+  <div class="row flex-nowrap" *ngIf="trendData">
     <div style="width:50%;">
-      Last week low: {{lastWeekLow}}
-      <br>something
+      <br>
+      Pricing Information for {{companyData.companyName}}:<br><br>
+      Today:<br>Open: {{trendData[today].open}}<br>Low: {{trendData[today].low}}<br>High: {{trendData[today].high}}<br>Close: {{trendData[today].close}}<br>Daily Percent Change: {{trendData[today].changePercent}}%<br><br>
+      Last Week:<br>Low: {{lastWeekLow}} on {{lastWeekLowDate}}<br>High: {{lastWeekHigh}} on {{lastWeekHighDate}}<br>Weekly Percent Change: {{lastWeekPercentChange}}%<br><br>
+      Last Month:<br>Low: {{lastMonthLow}} on {{lastMonthLowDate}}<br>High: {{lastMonthHigh}} on {{lastMonthHighDate}}<br>Monthly Percent Change: {{lastMonthPercentChange}}%<br><br>
+      Last Year:<br>Low: {{lastYearLow}} on {{lastYearLowDate}}<br>High: {{lastYearHigh}} on {{lastYearHighDate}}<br>Yearly Percent Change: {{lastYearPercentChange}}%<br><br>
     </div>
-    <div>{{lastWeekHigh}}</div>
+    <div>
+      <br>
+      Recent News Related to {{companyData.companyName}}:<br><br>
+      {{newsData[0].datetime.substring(0, 10)}}<br>
+      <a target ="_blank" href="{{newsData[0].url}}">{{newsData[0].source}}: {{newsData[0].headline}}</a>
+      <br><br>
+
+      {{newsData[1].datetime.substring(0, 10)}}<br>
+      <a target ="_blank" href="{{newsData[0].url}}">{{newsData[1].source}}: {{newsData[1].headline}}</a>
+      <br><br>
+
+      {{newsData[2].datetime.substring(0, 10)}}<br>
+      <a target ="_blank" href="{{newsData[0].url}}">{{newsData[2].source}}: {{newsData[2].headline}}</a>
+      <br><br>
+
+      {{newsData[3].datetime.substring(0, 10)}}<br>
+      <a target ="_blank" href="{{newsData[0].url}}">{{newsData[3].source}}: {{newsData[3].headline}}</a>
+      <br><br>
+
+      {{newsData[4].datetime.substring(0, 10)}}<br>
+      <a target ="_blank" href="{{newsData[0].url}}">{{newsData[4].source}}: {{newsData[4].headline}}</a>
+      <br><br>
+
+      {{newsData[5].datetime.substring(0, 10)}}<br>
+      <a target ="_blank" href="{{newsData[0].url}}">{{newsData[5].source}}: {{newsData[5].headline}}</a>
+      <br><br>
+
+      {{newsData[6].datetime.substring(0, 10)}}<br>
+      <a target ="_blank" href="{{newsData[0].url}}">{{newsData[6].source}}: {{newsData[6].headline}}</a>
+      <br><br>
+
+      {{newsData[7].datetime.substring(0, 10)}}<br>
+      <a target ="_blank" href="{{newsData[0].url}}">{{newsData[7].source}}: {{newsData[7].headline}}</a>
+      <br><br>
+
+      {{newsData[8].datetime.substring(0, 10)}}<br>
+      <a target ="_blank" href="{{newsData[0].url}}">{{newsData[8].source}}: {{newsData[8].headline}}</a>
+      <br><br>
+    </div>
   </div>
     </div>
 

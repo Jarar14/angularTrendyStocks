@@ -8,6 +8,7 @@ import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 
 import { AppComponent } from './app.component';
 import {CustomMaterialModule} from './custom-material/custom-material.module';
+import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
 
 
 @NgModule({
@@ -15,7 +16,7 @@ import {CustomMaterialModule} from './custom-material/custom-material.module';
     AppComponent
   ],
   imports: [
-    BrowserModule, HttpClientModule, BrowserAnimationsModule, CustomMaterialModule
+    BrowserModule, HttpClientModule, NgbModule.forRoot(), BrowserAnimationsModule, CustomMaterialModule
   ],
   providers: [StockService],
   bootstrap: [AppComponent],

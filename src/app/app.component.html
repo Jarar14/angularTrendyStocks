@@ -1,13 +1,53 @@
-<img  id="image" src="" />
-  <div class="topleft">
-    <div id="mySearch" class="search">
-      <span> Trends in: </span>
-      <input id="search" type="text" name="search">
-      <button id="myButton" class="button" (click)="search();">Go!</button>
-    </div>
+<div class="container-fluid">
+  <div class="row">
+  <div id="title"><div> Trendy Stocks</div>
   </div>
-<div id="header">{{companyData | json}}
+  </div>
+  <div class="centerstuff"> <span>  Search Market Symbols: </span>
+          <input id="search" type="text" name="search">
+          <button id="myButton" class="button" (click)="search();">Go!</button>
 </div>
-<div id="left"></div>
-<div id="right"></div>
 
+    <div>
+      <img *ngIf="logoData" [src]="logoData.url"/>
+    </div>
+  <div class="row">
+      <table id="result_table" *ngIf="companyData">
+        <tr>
+          <th mat-sort-header> Company Name:</th>
+          <th mat-sort-header> Exchange:</th>
+          <th mat-sort-header> Industry:</th>
+          <th mat-sort-header> Website:</th>
+          <th mat-sort-header> Description:</th>
+          <th mat-sort-header> CEO:</th>
+          <th mat-sort-header> Sector:</th>
+        </tr>
+
+        <tr>
+          <td>{{companyData.companyName}}</td>
+          <td>{{companyData.exchange}}</td>
+          <td>{{companyData.industry}}</td>
+          <td><a target="_blank" href="{{companyData.website}}">{{companyData.website}}</a></td>
+          <td>{{companyData.description}}</td>
+          <td>{{companyData.CEO}}</td>
+          <td>{{companyData.sector}}</td>
+        </tr>
+      </table>
+  </div>
+    </div>
+
+    <!--
+
+      <div *ngIf="companyData" class="card">
+        <div class="mat-row">
+          <div>Company Name: {{ companyData.companyName }}</div>
+          <div>Exchange: {{ companyData.exchange }}</div>
+          <div>Industry: {{ companyData.industry }}</div>
+          <div>Website: {{companyData.website}}</div>
+          <div>Description: {{companyData.description}}</div>
+          <div>CEO: {{companyData.CEO}}</div>
+          <div>Sector: {{companyData.sector}}</div>
+          <div></div>
+        </div>
+      </div>
+    -->

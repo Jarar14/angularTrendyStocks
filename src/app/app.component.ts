@@ -25,7 +25,28 @@ export class AppComponent {
         console.log(this.companyData);
     });
 
-    
+    this.stockService.getLogo(this.searchString).subscribe((result)=>{
+      ///code goes here
+      this.logoData = result;
+      console.log(this.logoData);
+    });
+
+    this.stockService.getNews(this.searchString).subscribe((result)=>{
+      ///code goes here
+      this.newsData = result;
+      console.log(this.newsData);
+    })
+
+    this.stockService.getChart(this.searchString).subscribe((result)=>{
+      ///code goes here
+      this.trendsData = result;
+      console.log(this.trendsData);
+    });
+
+
+
+
+
   }
 
 }

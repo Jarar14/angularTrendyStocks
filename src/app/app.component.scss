@@ -1,0 +1,105 @@
+#title {
+  background-color: #0B0B61;
+  text-decoration: underline overline;
+  line-height: 3.0;
+  word-spacing: 10px;
+  text-shadow: 3px 2px gray;
+  font-size: 100px;
+  width: 100%;
+  text-align: center;
+  color: #FFFFFF;
+  font-weight: 200;
+  -webkit-animation: mymove 5s infinite; /* Safari 4.0 - 8.0 */
+  animation: mymove 5s infinite;
+  @keyframes mymove {
+    50% {color: #A9A9F5;}}
+}
+
+#search{
+  background-color: #FFFFFF;
+  font-size:40px;
+  font-weight:200;
+  position: relative;
+  top: 6px;
+}
+
+.centerstuff{
+  background-color: #FFFFFF;
+  word-spacing:10px;
+  font-size:40px;
+  width: 100%;
+  text-align: center;
+}
+.button {
+  position: relative;
+  background-color: #075387;
+  border: none;
+  font-size: 18px;
+  color: #FFFFFF;
+  padding: 05px;
+  width: 100px;
+  left: 7px;
+  text-align: center;
+  -webkit-transition-duration: 0.4s;
+  transition-duration: 0.4s;
+  text-decoration: none;
+  overflow: hidden;
+  cursor: pointer;
+  border-radius: 05px;
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+}
+.button:after {
+  content: "";
+  background: #FFFFFF;
+  display: block;
+  position: absolute;
+  padding-top: 300%;
+  padding-left: 350%;
+  margin-left: -20px !important;
+  margin-top: -120%;
+  opacity: 0;
+  transition: all 0.8s
+}
+.button:active:after {
+  padding: 0;
+  margin: 0;
+  opacity: 1;
+  transition: 0s
+}
+.search {
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+  text-align: center;
+  background-color:#FFFFFF;
+  text-decoration: none;
+  letter-spacing: 3px;
+  line-height: 1.0;
+  word-spacing: 10px;
+  font-size: 42px;
+  font-weight: 200;
+  font-style: oblique;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+  top: 30px;
+  max-width: 20%;
+  height: auto;
+  padding: 20px;
+}
+
+#result_table {
+  border-collapse: collapse;
+
+}
+
+#result_table, th, td {
+  border: 1px solid #888888 !important;
+  padding: 7px;
+  margin-left: auto;
+  margin-right: auto;
+}

@@ -4,8 +4,8 @@
   </div>
   </div>
   <div class="centerstuff"> <span>  Search Market Symbols: </span>
-          <input id="search" type="text" name="search">
-          <button id="myButton" class="button" (click)="search();">Go!</button>
+          <input id="search" type="text" name="search" (keyup)="$event.keyCode === 13 && search()">
+          <button id="myButton" class="button" (click)="search();" (keydown)="$event.keyCode === 13 && search()">Go!</button>
 </div>
 
     <div>

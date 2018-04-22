@@ -30,7 +30,7 @@ export class AppComponent {
   lastYearLow:any;
   lastYearLowDate:any;
   lastYearHigh:any;
-  LastYearHighDate:any;
+  lastYearHighDate:any;
   lastYearPercentChange:any;
 
 
